@@ -11,7 +11,7 @@ var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obsta
 var score;
 
 var gameOverImg,restartImg; //adiciona
-var jumpSound , checkPointSound, dieSound; //adiciona
+
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
   trex_collided = loadAnimation("trex_collided.png");
@@ -25,9 +25,6 @@ function preload(){
   obstacle6 = loadImage("obstacle6.png");
   restartImg = loadImage("restart.png");  //adiciona
   gameOverImg = loadImage("gameOver.png");  //adiciona
-  jumpSound = loadSound("jump.mp3");  //adiciona
-  dieSound = loadSound("die.mp3");  //adiciona
-  checkPointSound = loadSound("checkPoint.mp3"); //adiciona
 }
 
 function setup() {
