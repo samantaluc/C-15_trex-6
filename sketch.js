@@ -32,7 +32,7 @@ function setup() {
   
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
-  trex.addAnimation("collided" ,trex_collided);
+  trex.addAnimation("collided" ,trex_collided); // ADICIONA <<<<<<<<<<<<<
   trex.scale = 0.5;
   
   ground = createSprite(200,180,400,20);
@@ -54,11 +54,9 @@ function setup() {
   //criar Grupos de Obstáculos e Nuvens
   obstaclesGroup = createGroup();
   cloudsGroup = createGroup();
-  
-  console.log("Olá" + 5);
-  
-  trex.setCollider("circle",0,0,40);
-  trex.debug = true
+    
+  trex.setCollider("circle",0,0,40); //adiciona
+  trex.debug = true; //adiciona
   
   score = 0;
   
@@ -98,15 +96,15 @@ function draw() {
     }
   }
    else if (gameState === END) {
-      gameOver.visible = true; //adiciona
-      restart.visible = true; //adiciona
+      gameOver.visible = true; //adiciona <<<<<<<<<<<<<<<<<
+      restart.visible = true; //adiciona <<<<<<<<<<<<<<
       ground.velocityX = 0;
-      trex.velocityY = 0;  //adiciona
+      trex.velocityY = 0;  //adiciona <<<<<<<<<<<<<<<<<<<<<
       //mudar a animação do trex
-      trex.changeAnimation("collided", trex_collided);  //adiciona
+      trex.changeAnimation("collided", trex_collided);  //adiciona <<<<<<<<<<<<<<<<<<<<<<<<
       //definir tempo de vida dos objetos do jogo para que eles nunca sejam destruídos
-     obstaclesGroup.setLifetimeEach(-1); //adiciona
-     cloudsGroup.setLifetimeEach(-1); //adiciona
+     obstaclesGroup.setLifetimeEach(-1); //adiciona <<<<<<<<<<<<<<<<<
+     cloudsGroup.setLifetimeEach(-1); //adiciona <<<<<<<<<<<<<<<<<<<<
      obstaclesGroup.setVelocityXEach(0);
      cloudsGroup.setVelocityXEach(0);
    }
